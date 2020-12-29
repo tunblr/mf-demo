@@ -7,7 +7,6 @@ import * as $ from "jquery";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  constructor() {
-    console.log("acp-app2 AppComponent", $().jquery);
-  }
+  version = "acp-app2 AppComponent. jquery version:  " + $().jquery;
+  constructor() {}
 }

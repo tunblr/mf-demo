@@ -7,9 +7,8 @@ import * as $ from "jquery";
   styleUrls: ["./component.css"],
 })
 export class TestComponent implements OnInit {
-  constructor() {
-    console.log("acp-app2 TestComponent", $().jquery);
-  }
+  version = "acp-app2 TestComponent. jquery version:  " + $().jquery;
+  constructor() {}
 
   ngOnInit(): void {}
 }

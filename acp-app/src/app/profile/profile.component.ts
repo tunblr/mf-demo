@@ -7,9 +7,8 @@ import * as $ from "jquery";
   styleUrls: ["./profile.component.css"],
 })
 export class ProfileComponent implements OnInit {
-  constructor() {
-    console.log("acp-app ProfileComponent", $().jquery);
-  }
+  version = "acp-app ProfileComponent. jquery version:  " + $().jquery;
+  constructor() {}
 
   ngOnInit(): void {}
 }

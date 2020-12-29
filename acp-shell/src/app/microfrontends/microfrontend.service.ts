@@ -14,9 +14,11 @@ export class MicrofrontendService {
    * remote microfrontends and configure them within the router
    */
   initialise(): Promise<void> {
+    console.log("initialise");
     return new Promise<void>((resolve, reject) => {
       this.microfrontends = this.loadConfig();
       this.router.resetConfig(buildRoutes(this.microfrontends));
+      console.log("initialise resolve", this.router.config);
       resolve();
     });
   }

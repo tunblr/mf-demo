@@ -8,7 +8,6 @@ import { MicrofrontendService } from "./microfrontends/microfrontend.service";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  constructor(public mfService: MicrofrontendService) {
-    console.log("acp-shell AppComponent", $().jquery);
-  }
+  version = "acp-shell AppComponent. jquery version:  " + $().jquery;
+  constructor(public mfService: MicrofrontendService) {}
 }
