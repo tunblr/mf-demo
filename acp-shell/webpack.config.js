@@ -1,5 +1,7 @@
 const webpack = require("webpack");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   output: {
@@ -10,6 +12,7 @@ module.exports = {
     runtimeChunk: false,
   },
   plugins: [
+    new BundleAnalyzerPlugin(),
     new ModuleFederationPlugin({
       shared: {
         "@angular/core": { eager: true, singleton: true },
